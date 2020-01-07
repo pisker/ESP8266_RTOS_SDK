@@ -1,9 +1,8 @@
-ifdef CONFIG_USING_SPIFFS
 COMPONENT_ADD_INCLUDEDIRS := include
 COMPONENT_PRIV_INCLUDEDIRS := . spiffs/src
 COMPONENT_SRCDIRS := . spiffs/src
-else
-COMPONENT_ADD_INCLUDEDIRS :=
-COMPONENT_PRIV_INCLUDEDIRS :=
-COMPONENT_SRCDIRS :=
-endif
+
+# To avoid warning for strncpy in "spiffs_nucleus.c"
+CPPFLAGS += -Wno-stringop-truncation
+
+COMPONENT_SUBMODULES := spiffs

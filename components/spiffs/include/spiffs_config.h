@@ -205,7 +205,7 @@ _Static_assert(SPIFFS_OBJ_META_LEN + SPIFFS_OBJ_NAME_LEN + SPIFFS_PAGE_EXTRA_SIZ
 #define SPIFFS_SINGLETON 0
 
 // Enable this if your target needs aligned data for index tables
-#define SPIFFS_ALIGNED_OBJECT_INDEX_TABLES      4
+#define SPIFFS_ALIGNED_OBJECT_INDEX_TABLES      1
 
 // Enable this if you want the HAL callbacks to be called with the spiffs struct
 #define SPIFFS_HAL_CALLBACK_EXTRA               1
@@ -228,7 +228,7 @@ _Static_assert(SPIFFS_OBJ_META_LEN + SPIFFS_OBJ_NAME_LEN + SPIFFS_PAGE_EXTRA_SIZ
 // SPIFFS_USE_MAGIC is enabled, SPIFFS_ERR_RO_ABORTED_OPERATION will be
 // returned.
 // Might be useful for e.g. bootloaders and such.
-#define SPIFFS_READ_ONLY                        0
+#define SPIFFS_READ_ONLY                        1
 
 // Enable this to add a temporal file cache using the fd buffer.
 // The effects of the cache is that SPIFFS_open will find the file faster in
